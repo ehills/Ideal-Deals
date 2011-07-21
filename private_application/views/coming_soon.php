@@ -17,40 +17,42 @@
 		<div id="content">
 			<div class="logo">
 				<div class="logoImgHolder">
-					<img src="images/ideal-logo.png" alt="logo" width="512" height="615"/>
+					<img src="images/ideal-logo.png" alt="logo" width="512"
+						height="615" />
 					<!--end .logoImgHolder-->
 				</div>
 				<div class="featureImage">
 					<div id="subscribeForm">
-						<?php form_open('welcome/subscribeAction')?>
-						<form id="form" action="index.php/welcome/subscribeAction" method="post" name="ideal_form">
-							<div class="fieldHolder">
-								<label>name:</label> <input type="text" name="name" class="textInput" id="name" />
-								<!--end .fieldHolder-->
+					<?php $attributes = array('name' => 'ideal_form', 'id' => 'form');
+					echo form_open('welcome/subscribeAction', $attributes);?>
+						<div class="fieldHolder">
+							<label>name:</label> <input type="text" name="name"
+								class="textInput" id="name" />
+							<!--end .fieldHolder-->
+						</div>
+						<div class="fieldHolder">
+							<label>email:</label> <input type="text" name="email"
+								class="textInput" id="emailInput" />
+							<!--end .fieldHolder-->
+						</div>
+						<div class="submitHolder">
+							<div class="submit">
+								<input name="submitButton" type="image" value="Subscribe"
+									alt="subscribe button" src="images/subscribe-button.png"
+									width="142" height="45" />
+								<!-- end .submit-->
 							</div>
-							<div class="fieldHolder">
-								<label>email:</label> <input type="text" name="email" class="textInput" id="emailInput" />
-								<!--end .fieldHolder-->
-							</div>
-							<div class="submitHolder">
-								<div class="submit">
-									<input name="submitButton" type="image" value="Subscribe" 
-									alt="subscribe button" src="images/subscribe-button.png" width="142" height = "45" />
-									<!-- end .submit-->
-								</div>
-								<div class="followBtnHolder">
-										<a href="http://www.twitter.com">
-										<img src="images/twitter-icon.png"
-										alt="Follow on Twitter" width="42" height ="42" /></a>
-										<!--end .followBtn-->	
-										<a href="http://www.facebook.com">
-										<img src="images/facebook-icon.png"
-										alt="Follow on Facebook" width="48" height ="48"/></a>
-								</div>
-								<!--end .submitHolder-->
-							</div>
+						</div>
 						</form>
-						<!--end .subscribeForm-->
+						<div class="followBtnHolder">
+							<a href="http://www.twitter.com"> <img
+								src="images/twitter-icon.png" alt="Follow on Twitter" width="42"
+								height="42" /> </a>
+							<!--end .followBtn-->
+							<a href="http://www.facebook.com"> <img
+								src="images/facebook-icon.png" alt="Follow on Facebook"
+								width="48" height="48" /> </a>
+						</div>
 					</div>
 					<!--end .featureImage-->
 				</div>
