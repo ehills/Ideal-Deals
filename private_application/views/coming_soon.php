@@ -3,10 +3,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
 <title>Ideal deals for you!</title>
+
 <link href="stylesheets/style.css" rel="stylesheet" type="text/css" />
+<!-- include jQuery library --> 
+<script type="text/javascript" src="scripts/jquery.js"></script> 
+<script type="text/javascript" src="scripts/jquery.validate.js"></script> 
+<script type="text/javascript" src="scripts/validate_subscription.js"></script> 
 </head>
-﻿
 <!--[if IE ]>
   <body class="ie">
 <![endif]-->
@@ -23,7 +28,7 @@
 				</div>
 				<div class="featureImage">
 					<div id="subscribeForm">
-					<?php $attributes = array('name' => 'ideal_form', 'id' => 'form');
+					<?php $attributes = array('name' => 'ideal_form', 'id' => 'subscription_form');
 					echo form_open('welcome/subscribeAction', $attributes);?>
 						<div class="fieldHolder">
 							<label>name:</label> <input type="text" name="name"
@@ -46,12 +51,11 @@
 						</form>
 						<div class="followBtnHolder">
 							<a href="http://www.twitter.com"> <img
-								src="images/twitter-icon.png" alt="Follow on Twitter" width="42"
-								height="42" /> </a>
-							<!--end .followBtn-->
+								src="images/twitter-icon.png" alt="Follow on Twitter" width="40"
+								height="40" /> </a>
 							<a href="http://www.facebook.com"> <img
 								src="images/facebook-icon.png" alt="Follow on Facebook"
-								width="48" height="48" /> </a>
+								width="40" height="40" /> </a>
 						</div>
 					</div>
 					<!--end .featureImage-->

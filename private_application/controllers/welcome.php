@@ -2,6 +2,11 @@
 
 class Welcome extends CI_Controller {
 
+	public function Welcome() {
+		parent::__construct();
+		$this->load->helper('form');
+		$this->load->helper('email');
+	}
 	/**
 	 * Index Page for this controller.
 	 *
@@ -19,15 +24,11 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->helper('form');
 		$this->load->view('coming_soon');	
 	}
 	
 	public function subscribeAction()
-	{
-		$this->load->helper('email');
-		$this->load->library('form_validation');
-		
+	{		
 		$email = htmlentities($_POST['email']);
 		$name = htmlentities($_POST['name']);
 		

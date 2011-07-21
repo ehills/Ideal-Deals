@@ -94,14 +94,14 @@ a:hover, a:active, a:focus {
 	z-index:56;
 }
 
-#form {
+#subscription_form {
 	font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
 	font-size:18px;
 	margin-left:5px;
 
 }
 
-#form label {
+#subscription_form label {
 	color:#d3e8b1;
 	text-shadow: #fff 0px -1px 0px;
 	font-weight:bold;
@@ -126,15 +126,20 @@ a:hover, a:active, a:focus {
 	outline:none;	
 	color:white;
 	font-size:18px;
-
-	
 }
+
+/* Javascript errors */
+label.error {
+    font-size: 12pt;
+    margin-left: 10px;
+    width: auto;
+    display: inline;
+}
+
 input:focus,textarea:focus,select:focus{
- 
  -webkit-box-shadow:0 8px rgba(255,255,255,.5);
  -moz-box-shadow:0 0 8px rgba(255,255,255,.5);
  box-shadow:0 0 8px rgba(255,255,255,.5);
-
 }
 
 input.textInput {
