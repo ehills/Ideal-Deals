@@ -48,8 +48,7 @@ a:hover, a:active, a:focus {
 }
 
 .greyFiller {
-	margin-left:auto;
-	margin-right:auto;
+	margin: 0 auto;
     background-image:url(../images/grey-background-texture.png);
 	background-repeat: repeat;
 	position:absolute;
@@ -63,24 +62,17 @@ a:hover, a:active, a:focus {
 	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#888888')";
 	/* For IE 5.5 - 7 */
 	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#888888');
-	z-index:50;
+	z-index:5;
 }
 
 /* logo */
-.logo {
-	position:relative;
-	margin-top:auto;
-	margin-bottom:auto;
-	height:100%;
-}
-	
-.logoImgHolder {
+#logoImgHolder {
 	position:relative;
 	margin-left:auto;
 	margin-right:auto;
 	width:380px;
 	height:500px;
-	z-index:55;
+	z-index:10;
 }
 
 /* Form */
@@ -98,10 +90,29 @@ a:hover, a:active, a:focus {
 	font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
 	font-size:18px;
 	margin-left:5px;
-
 }
 
 #subscription_form label {
+	color:#d3e8b1;
+	text-shadow: #fff 0px -1px 0px;
+	font-weight:bold;
+	font-weight:800;/*ie style*/
+}
+/*
+#load {  
+    display: none;  
+    position: absolute;  
+    rightright: 10px;  
+    top: 10px;  
+    background: url(images/facebook-icon.png);  
+    width: 43px;  
+    height: 11px;  
+    text-indent: -9999em;  
+}  */
+
+#load { 
+	display: none; 
+	font-size: 18pt;
 	color:#d3e8b1;
 	text-shadow: #fff 0px -1px 0px;
 	font-weight:bold;
@@ -112,6 +123,7 @@ a:hover, a:active, a:focus {
 .fieldHolder #emailInput{
 	position:relative;
 	margin-top:10px;
+	width:200px;
 }
 
 .fieldHolder input{
@@ -131,9 +143,7 @@ a:hover, a:active, a:focus {
 /* Javascript errors */
 label.error {
     font-size: 12pt;
-    margin-left: 10px;
-    width: auto;
-    display: inline;
+    width: 20px;
 }
 
 input:focus,textarea:focus,select:focus{
@@ -146,12 +156,12 @@ input.textInput {
 	width:200px;
 }
 
-.submit{
+.submitSubscription {
 	position:relative;
 	padding-top:20px;
 	margin-left:150px;
 }
-.ie div.submit {
+.ie div.submitSubscription {
 	position:relative;
 	padding-top:29px;
 	margin-left:150px;

@@ -12,10 +12,10 @@ class Welcome extends CI_Controller {
 	 *
 	 * Maps to the following URL
 	 * 		http://example.com/index.php/welcome
-	 *	- or -  
+	 *	- or -
 	 * 		http://example.com/index.php/welcome/index
 	 *	- or -
-	 * Since this controller is set as the default controller in 
+	 * Since this controller is set as the default controller in
 	 * config/routes.php, it's displayed at http://example.com/
 	 *
 	 * So any other public methods not prefixed with an underscore will
@@ -24,40 +24,38 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('coming_soon');	
+		$this->load->view('coming_soon');
 	}
-	
+
 	public function subscribeAction()
-	{		
+	{
 		$email = htmlentities($_POST['email']);
 		$name = htmlentities($_POST['name']);
-		
-		if (valid_email($email) && preg_match('/^[ a-zA-Z._-]{2,40}$/', $name)) {
-				echo 'all good';
-				$sql = "INSERT INTO subscribed_users(name, email)
+
+		if (valid_email($email) && preg_match('/^[ a-zA-Z.\-\']{2,40}$/', $name)) {
+			$sql = "INSERT INTO subscribed_users(name, email)
 					VALUES(?, ?)";
 
-				$this->db->query($sql, array($name, $email));
-				
-				if (mysql_affected_rows() == 1) {
-					include "../private_application/views/includes/subscribe_email.php";
-				}
+			$this->db->query($sql, array($name, $email));
+
+			if (mysql_affected_rows() == 1) {
+				include "../private_application/views/includes/subscribe_email.php";
+			}
+			echo "true";
+			exit;
 		}
-		
+
 		if (!valid_email($email)) {
 			echo 'not valid email';
 			$email_error = 'Your email is not valid.';
-			
+				
 		}
-		if (!preg_match('/^[ a-zA-Z._-]{2,40}$/', $name)) {
+		if (!preg_match('/^[ a-zA-Z.\-\']{2,40}$/', $name)) {
 			echo $name;
 			echo 'not valid name';
-			$name_error = 'Your name is not valid.';			
+			$name_error = 'Your name is not valid.';
 		}
-		
-		
-	
-		//header("Location: index.php/welcome");
+
 	}
 }
 

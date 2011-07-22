@@ -9,6 +9,6 @@ The site is still under development but will be ready soon! <br />As soon as its
 <br /> <br /> 														
 Thankyou for registering with Ideal Deals!";
         $header = "From: subscription@idealdeals.com";
-        mail($recipient, $subject, $message, $header);
+        //mail($recipient, $subject, $message, $header);
         /* End of email */
         ?>

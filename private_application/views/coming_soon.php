@@ -8,7 +8,7 @@
 
 <link href="stylesheets/style.css" rel="stylesheet" type="text/css" />
 <!-- include jQuery library --> 
-<script type="text/javascript" src="scripts/jquery.js"></script> 
+<script type="text/javascript" src="scripts/jquery-1.6.1.min.js"></script> 
 <script type="text/javascript" src="scripts/jquery.validate.js"></script> 
 <script type="text/javascript" src="scripts/validate_subscription.js"></script> 
 </head>
@@ -20,14 +20,12 @@
 	<!--<![endif]-->
 	<div id="container">
 		<div id="content">
-			<div class="logo">
-				<div class="logoImgHolder">
+				<div id="logoImgHolder">
 					<img src="images/ideal-logo.png" alt="logo" width="512"
 						height="615" />
 					<!--end .logoImgHolder-->
 				</div>
-				<div class="featureImage">
-					<div id="subscribeForm">
+				<div id="subscribeForm">
 					<?php $attributes = array('name' => 'ideal_form', 'id' => 'subscription_form');
 					echo form_open('welcome/subscribeAction', $attributes);?>
 						<div class="fieldHolder">
@@ -40,14 +38,11 @@
 								class="textInput" id="emailInput" />
 							<!--end .fieldHolder-->
 						</div>
-						<div class="submitHolder">
-							<div class="submit">
+							<div class="submitSubscription">
 								<input name="submitButton" type="image" value="Subscribe"
-									alt="subscribe button" src="images/subscribe-button.png"
-									width="142" height="45" />
+									alt="subscribe button" src="images/subscribe-button.png"/>
 								<!-- end .submit-->
 							</div>
-						</div>
 						</form>
 						<div class="followBtnHolder">
 							<a href="http://www.twitter.com"> <img
@@ -58,10 +53,6 @@
 								width="40" height="40" /> </a>
 						</div>
 					</div>
-					<!--end .featureImage-->
-				</div>
-				<!--end .logo-->
-			</div>
 			<div class="greyFiller">
 				<!--end .greyFiller-->
 			</div>
