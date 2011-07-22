@@ -28,17 +28,14 @@ $(document).ready(function() {
 });
 
 function formSubmit(){
-	alert("submission!");
-	var form_data = {
-			name: $('#name').val(),
-			email: $('#email').val(),
-			ajax: '1'
-		};
-};
 
-$('form').submit(function(){
-		
-	alert("submission!");
+	alert("form sent!");
+	
+	$('#subscription_form').hide();
+	$('#subscribeForm').append("<p id='load'>Thanks for signing up!</p>"); 
+	$('#load').fadeIn(1000);  
+	
+	/*
 	var form_data = {
 			name: $('#name').val(),
 			email: $('#email').val(),
@@ -46,16 +43,16 @@ $('form').submit(function(){
 	};
 
 	$.ajax({
-		url: "<?php echo site_url('contact/submit'); ?> ",
+		url: "http://localhost/IdealDeals/public/index.php/welcome/subscribeAction",
 		type: 'POST',
 		data: form_data,
 		success: function(msg) {
+			alert("success!");
 			$('#subscription_form').hide();
 			$('#subscribeForm').append(msg); 
 			$('#load').fadeIn(1000);  
 		}
 	});
-	
+	*/
 	return false;
-	
-});
+};

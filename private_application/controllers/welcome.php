@@ -4,6 +4,7 @@ class Welcome extends CI_Controller {
 
 	public function Welcome() {
 		parent::__construct();
+		
 		$this->load->helper('form');
 		$this->load->helper('email');
 	}
