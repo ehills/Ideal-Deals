@@ -9,9 +9,7 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color:#fafafa;
-	 
 }
-
 
 ul, ol, dl { 
 	padding: 0;
@@ -28,7 +26,7 @@ a img {
 
 a:link {
 	color:#414958;
-	text-decoration: underline;
+	text-decoration: none;
 }
 a:visited {
 	color: #4E5869;
@@ -40,7 +38,6 @@ a:hover, a:active, a:focus {
 
 /* Container */
 #container {
-	
 	padding-top:17px;
 	width: 100%;
 	height: 100%;
@@ -98,17 +95,6 @@ a:hover, a:active, a:focus {
 	font-weight:bold;
 	font-weight:800;/*ie style*/
 }
-/*
-#load {  
-    display: none;  
-    position: absolute;  
-    rightright: 10px;  
-    top: 10px;  
-    background: url(images/facebook-icon.png);  
-    width: 43px;  
-    height: 11px;  
-    text-indent: -9999em;  
-}  */
 
 #load { 
 	display: none; 
@@ -120,7 +106,7 @@ a:hover, a:active, a:focus {
 }
  
 /* field imput */
-.fieldHolder #emailInput{
+.fieldHolder #email{
 	position:relative;
 	margin-top:10px;
 	width:200px;
@@ -142,9 +128,17 @@ a:hover, a:active, a:focus {
 
 /* Javascript errors */
 label.error {
+	position: absolute;
+	top: -10px;
+	margin-left: 10px;
     font-size: 12pt;
-    width: 20px;
+    width: 200px;
 }
+
+.error + .error {
+	top: -15px;
+}
+/* end of errors */
 
 input:focus,textarea:focus,select:focus{
  -webkit-box-shadow:0 8px rgba(255,255,255,.5);
@@ -156,12 +150,13 @@ input.textInput {
 	width:200px;
 }
 
-.submitSubscription {
+#submitSubscription {
 	position:relative;
 	padding-top:20px;
 	margin-left:150px;
 }
-.ie div.submitSubscription {
+
+.ie div#submitSubscription {
 	position:relative;
 	padding-top:29px;
 	margin-left:150px;
@@ -173,6 +168,11 @@ input.textInput {
 	top:100px;
 	right:200px;
 }
+
+.followBtnHolder img {
+	margin-left: 10px;
+}
+
 #content ul, #content ol { 
 	padding: 0 15px 15px 40px; 
 }

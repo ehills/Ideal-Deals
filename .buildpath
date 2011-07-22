@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildpath>
+	<buildpathentry kind="src" path="private_application/config"/>
+	<buildpathentry kind="src" path="private_application/controllers"/>
+	<buildpathentry kind="src" path="private_application/errors"/>
+	<buildpathentry kind="src" path="private_application/views"/>
+	<buildpathentry kind="src" path="private_system/core"/>
+	<buildpathentry kind="src" path="private_system/database"/>
+	<buildpathentry kind="src" path="private_system/helpers"/>
+	<buildpathentry kind="src" path="private_system/language/english"/>
+	<buildpathentry kind="src" path="private_system/libraries"/>
+	<buildpathentry kind="src" path="public"/>
+	<buildpathentry kind="con" path="org.eclipse.php.core.LANGUAGE"/>
+</buildpath>

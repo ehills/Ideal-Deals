@@ -29,8 +29,13 @@ class Welcome extends CI_Controller {
 
 	public function subscribeAction()
 	{
-		$email = htmlentities($_POST['email']);
-		$name = htmlentities($_POST['name']);
+		$email = htmlentities($this->input->post('email'));
+		$name = htmlentities($this->input->post('name'));
+		$is_ajax = $this->input->post('ajax');
+		
+		if (!$is_ajax) {
+			header("Location: ../../");
+		}
 
 		if (valid_email($email) && preg_match('/^[ a-zA-Z.\-\']{2,40}$/', $name)) {
 			$sql = "INSERT INTO subscribed_users(name, email)
@@ -40,9 +45,8 @@ class Welcome extends CI_Controller {
 
 			if (mysql_affected_rows() == 1) {
 				include "../private_application/views/includes/subscribe_email.php";
+				$this->load->view('subscription_success');
 			}
-			echo "true";
-			exit;
 		}
 
 		if (!valid_email($email)) {

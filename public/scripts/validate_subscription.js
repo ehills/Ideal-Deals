@@ -16,22 +16,46 @@ $(document).ready(function() {
 				required: "Please enter your first and last name",
 				minlength: "Your name must be at least 2 characters long"
 			},
-			email: "Please enter a valid email address"
+			email: { 
+				email: "Please enter a valid email address",
+				required: "Please enter an email address"
+			},
 		},
 		errorPlacement: function(error, element) {
 			error.appendTo( element.parent().next() );
 		}
 	});
 });
-$('form').submit(function(){
-	
-	var $formId = $(this).parents('form');
-    var formAction = $formId.attr('action');
 
-	$('#subscription_form').hide();
-	$.post(formAction, function(){
-		$('#subscribeForm').append('<p id="load">Thankyou for subscribing with Ideal Deals! You will receive an email shortly.</p>'); 
-		$('#load').fadeIn(6000);  
+function formSubmit(){
+	alert("submission!");
+	var form_data = {
+			name: $('#name').val(),
+			email: $('#email').val(),
+			ajax: '1'
+		};
+};
+
+$('form').submit(function(){
+		
+	alert("submission!");
+	var form_data = {
+			name: $('#name').val(),
+			email: $('#email').val(),
+			ajax: '1'
+	};
+
+	$.ajax({
+		url: "<?php echo site_url('contact/submit'); ?> ",
+		type: 'POST',
+		data: form_data,
+		success: function(msg) {
+			$('#subscription_form').hide();
+			$('#subscribeForm').append(msg); 
+			$('#load').fadeIn(1000);  
+		}
 	});
+	
+	return false;
 	
 });
