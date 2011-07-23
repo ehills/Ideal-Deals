@@ -8,16 +8,14 @@
 
 <link href="stylesheets/style.css" rel="stylesheet" type="text/css" />
 <!-- include jQuery library -->
-<script type="text/javascript" src="scripts/jquery-1.6.1.min.js"></script>
+<script type="text/javascript" src="scripts/jquery-1.6.2.min.js"></script>
 <script type="text/javascript" src="scripts/jquery.validate.js"></script>
 <script type="text/javascript" src="scripts/validate_subscription.js"></script>
 </head>
 <!--[if IE ]>
-  <body class="ie">
+<body class="ie">
 <![endif]-->
-<!--[if !IE]>-->
 <body>
-	<!--<![endif]-->
 	<div id="container">
 		<div id="content">
 			<div id="logoImgHolder">
@@ -29,16 +27,16 @@
 			echo form_open('welcome/subscribeAction', $attributes);?>
 				<div class="fieldHolder">
 					<label>name:</label> <input type="text" name="name"
-						class="textInput" id="name" />
+						class="textInput" id="name" title=""/>
 					<!--end .fieldHolder-->
 				</div>
 				<div class="fieldHolder">
 					<label>email:</label> <input type="text" name="email"
-						class="textInput" id="email" />
+						class="textInput" id="email" title=""/>
 					<!--end .fieldHolder-->
 				</div>
 				<div id="submitSubscription">
-					<input id="submitButton" name="submitButton" onClick="formSubmit()" type="image"
+					<input id="submitButton" name="submitButton"  type="image"
 						value="Subscribe" alt="subscribe button"
 						src="images/subscribe-button.png" />
 					<!-- end .submit-->

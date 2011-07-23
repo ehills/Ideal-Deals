@@ -34,8 +34,12 @@ class Welcome extends CI_Controller {
 		$name = htmlentities($this->input->post('name'));
 		$is_ajax = $this->input->post('ajax');
 		
+		echo "fuck";
+		exit;
+		
+		/*
 		if (!$is_ajax) {
-			header("Location: ../../");
+			echo "<p>WORK</p>";
 		}
 
 		if (valid_email($email) && preg_match('/^[ a-zA-Z.\-\']{2,40}$/', $name)) {
@@ -46,7 +50,8 @@ class Welcome extends CI_Controller {
 
 			if (mysql_affected_rows() == 1) {
 				include "../private_application/views/includes/subscribe_email.php";
-				$this->load->view('subscription_success');
+				//echo $this->load->view('subscription_success');
+				echo "<p>WORK</p>";
 			}
 		}
 
@@ -59,7 +64,7 @@ class Welcome extends CI_Controller {
 			echo $name;
 			echo 'not valid name';
 			$name_error = 'Your name is not valid.';
-		}
+		} */
 
 	}
 }

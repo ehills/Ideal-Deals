@@ -127,13 +127,21 @@ a:hover, a:active, a:focus {
 }
 
 /* Javascript errors */
-label.error {
+
+	/*.error {
 	position: absolute;
 	top: -10px;
 	margin-left: 10px;
     font-size: 12pt;
     width: 200px;
 }
+*/
+input + .error {
+	position: absolute;
+	margin-left: 10px;
+	width: 200px;
+	margin-bottom: 100px;
+	}
 
 .error + .error {
 	top: -15px;

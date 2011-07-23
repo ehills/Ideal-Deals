@@ -1,5 +1,29 @@
 $(document).ready(function() {
-	// validate register form on ready and submit
+
+	submitHandler: function formSubmit(form) {
+		
+		var form_data = {
+				name: $('#name').val(),
+				email: $('#email').val(),
+				ajax: '1'
+		};
+
+		$.ajax({
+			url: "http://localhost/IdealDeals/public/index.php/welcome/subscribeAction",
+			type: 'POST',
+			data: form_data,
+			success: function(msg) {
+				$('#subscription_form').hide();
+				$('#subscribeForm').append(msg); 
+				$('#load').fadeIn(1000);  
+			}
+		});
+		
+		return false;
+	}
+
+
+	//validate register form on ready and submit
 	$("#subscription_form").validate({
 		rules: {
 			name: {
@@ -14,45 +38,18 @@ $(document).ready(function() {
 		messages: {
 			name: {
 				required: "Please enter your first and last name",
-				minlength: "Your name must be at least 2 characters long"
+				minlength: "Your name is too short."
 			},
 			email: { 
 				email: "Please enter a valid email address",
 				required: "Please enter an email address"
-			},
+			}
 		},
-		errorPlacement: function(error, element) {
-			error.appendTo( element.parent().next() );
-		}
+		submitHandler: formSubmit
+	
+	
 	});
+
+
 });
 
-function formSubmit(){
-
-	alert("form sent!");
-	
-	$('#subscription_form').hide();
-	$('#subscribeForm').append("<p id='load'>Thanks for signing up!</p>"); 
-	$('#load').fadeIn(1000);  
-	
-	/*
-	var form_data = {
-			name: $('#name').val(),
-			email: $('#email').val(),
-			ajax: '1'
-	};
-
-	$.ajax({
-		url: "http://localhost/IdealDeals/public/index.php/welcome/subscribeAction",
-		type: 'POST',
-		data: form_data,
-		success: function(msg) {
-			alert("success!");
-			$('#subscription_form').hide();
-			$('#subscribeForm').append(msg); 
-			$('#load').fadeIn(1000);  
-		}
-	});
-	*/
-	return false;
-};
