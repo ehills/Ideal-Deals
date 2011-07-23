@@ -15,17 +15,12 @@ $(document).ready(function() {
 			success: function(msg) {
 				$('#subscription_form').hide();
 				$('#subscribeForm').append(msg); 
-<<<<<<< HEAD
 				$('#load').fadeIn(2000);  
-=======
-				$('#load').fadeIn(1000);  
->>>>>>> 794866c256a68088904c1553c48dd32bfc1b4273
 			}
 		});
 		
 		return false;
 	}
-
 
 	//validate register form on ready and submit
 	$("#subscription_form").validate({
@@ -50,10 +45,5 @@ $(document).ready(function() {
 			}
 		},
 		submitHandler: formSubmit
-	
-	
 	});
-
-
 });
-
