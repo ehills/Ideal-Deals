@@ -9,9 +9,7 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color:#fafafa;
-	 
 }
-
 
 ul, ol, dl { 
 	padding: 0;
@@ -28,7 +26,7 @@ a img {
 
 a:link {
 	color:#414958;
-	text-decoration: underline;
+	text-decoration: none;
 }
 a:visited {
 	color: #4E5869;
@@ -40,7 +38,6 @@ a:hover, a:active, a:focus {
 
 /* Container */
 #container {
-	
 	padding-top:17px;
 	width: 100%;
 	height: 100%;
@@ -48,8 +45,7 @@ a:hover, a:active, a:focus {
 }
 
 .greyFiller {
-	margin-left:auto;
-	margin-right:auto;
+	margin: 0 auto;
     background-image:url(../images/grey-background-texture.png);
 	background-repeat: repeat;
 	position:absolute;
@@ -63,24 +59,17 @@ a:hover, a:active, a:focus {
 	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#888888')";
 	/* For IE 5.5 - 7 */
 	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#888888');
-	z-index:50;
+	z-index:5;
 }
 
 /* logo */
-.logo {
-	position:relative;
-	margin-top:auto;
-	margin-bottom:auto;
-	height:100%;
-}
-	
-.logoImgHolder {
+#logoImgHolder {
 	position:relative;
 	margin-left:auto;
 	margin-right:auto;
 	width:380px;
 	height:500px;
-	z-index:55;
+	z-index:10;
 }
 
 /* Form */
@@ -98,7 +87,6 @@ a:hover, a:active, a:focus {
 	font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
 	font-size:18px;
 	margin-left:5px;
-
 }
 
 #subscription_form label {
@@ -107,11 +95,21 @@ a:hover, a:active, a:focus {
 	font-weight:bold;
 	font-weight:800;/*ie style*/
 }
+
+#load { 
+	display: none; 
+	font-size: 18pt;
+	color:#d3e8b1;
+	text-shadow: #fff 0px -1px 0px;
+	font-weight:bold;
+	font-weight:800;/*ie style*/
+}
  
 /* field imput */
-.fieldHolder #emailInput{
+.fieldHolder #email{
 	position:relative;
 	margin-top:10px;
+	width:200px;
 }
 
 .fieldHolder input{
@@ -129,12 +127,26 @@ a:hover, a:active, a:focus {
 }
 
 /* Javascript errors */
-label.error {
+
+	/*.error {
+	position: absolute;
+	top: -10px;
+	margin-left: 10px;
     font-size: 12pt;
-    margin-left: 10px;
-    width: auto;
-    display: inline;
+    width: 200px;
 }
+*/
+input + .error {
+	position: absolute;
+	margin-left: 10px;
+	width: 200px;
+	margin-bottom: 100px;
+	}
+
+.error + .error {
+	top: -15px;
+}
+/* end of errors */
 
 input:focus,textarea:focus,select:focus{
  -webkit-box-shadow:0 8px rgba(255,255,255,.5);
@@ -146,12 +158,13 @@ input.textInput {
 	width:200px;
 }
 
-.submit{
+#submitSubscription {
 	position:relative;
 	padding-top:20px;
 	margin-left:150px;
 }
-.ie div.submit {
+
+.ie div#submitSubscription {
 	position:relative;
 	padding-top:29px;
 	margin-left:150px;
@@ -160,9 +173,14 @@ input.textInput {
 .followBtnHolder {
 	padding-bottom:50px;
 	position:absolute;
-	top:100px;
-	right:200px;
+	top:90px;
+	right:210px;
 }
+
+.followBtnHolder img {
+	margin-left: 10px;
+}
+
 #content ul, #content ol { 
 	padding: 0 15px 15px 40px; 
 }
