@@ -1,5 +1,4 @@
-<?phpif(!defined('BASEPATH'))
-	exit('No direct script access allowed');
+<?php if(!defined('BASEPATH')) exit('No direct script access allowed');
 
 class Welcome extends CI_Controller {
 
@@ -11,7 +10,8 @@ class Welcome extends CI_Controller {
 	}
 
 	public function index() {
-		$this -> load -> view('coming_soon');
+		$data['error'] = 'nothing';
+		$this -> load -> view('coming_soon', $data);
 	}
 
 	public function subscribeAction() {
@@ -27,7 +27,9 @@ class Welcome extends CI_Controller {
 
 			if(mysql_affected_rows() == 1) {
 				include ("../private_application/views/includes/subscribe_email.php");
-				echo "<p id='load'>Thankyou for subscribing with Ideal Deals! You will receive an email shortly.</p>";
+				if ($is_ajax) {
+					echo "<p id='load'>Thankyou for subscribing with Ideal Deals! You will receive an email shortly.</p>";
+				}
 			}
 		}
 		if($is_ajax) {
@@ -78,12 +80,13 @@ class Welcome extends CI_Controller {
 	}
 
 	public function badEmail() {
-		$
-		$this -> load -> view('coming_soon');
+		$data['error'] = 'email';
+		$this -> load -> view('coming_soon', $data);
 	} 
 	
 	public function badName() {
-		$this -> load -> view('coming_soon');	
+		$data['error'] = 'name';
+		$this -> load -> view('coming_soon', $data);	
 	}
 
 }
