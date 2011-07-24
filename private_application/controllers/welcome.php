@@ -75,7 +75,6 @@ class Welcome extends CI_Controller {
 			if(!preg_match('/^[ a-zA-Z.\-\']{2,40}$/', $name)) {
 				badName();
 			}
-			
 		}
 	}
 
