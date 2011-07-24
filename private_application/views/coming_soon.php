@@ -28,6 +28,8 @@
 					include("../private_application/views/includes/subscribe_form_emailerr.php");
 				} elseif($error == 'name') {
 					include("../private_application/views/includes/subscribe_form_nameerr.php");
+				} elseif($error == 'noAjaxComplete') {
+					include("../private_application/views/includes/subscribe_form_noAjax.php");	
 				} else {
 					include("../private_application/views/includes/subscribe_form.php");
 				}

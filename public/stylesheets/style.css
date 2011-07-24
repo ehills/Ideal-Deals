@@ -97,7 +97,15 @@ a:hover, a:active, a:focus {
 }
 
 #load { 
-	display: none; 
+	display: none;
+	font-size: 18pt;
+	color:#d3e8b1;
+	text-shadow: #fff 0px -1px 0px;
+	font-weight:bold;
+	font-weight:800; /*ie style*/
+}
+
+#noAjax { 
 	font-size: 18pt;
 	color:#d3e8b1;
 	text-shadow: #fff 0px -1px 0px;
@@ -141,19 +149,12 @@ a:hover, a:active, a:focus {
 
 /* Javascript errors */
 
-	/*.error {
-	position: absolute;
-	top: -10px;
-	margin-left: 10px;
-    font-size: 12pt;
-    width: 200px;
-}
-*/
 input + .error {
 	position: absolute;
-	margin-left: 10px;
+	left: 300px;
 	width: 200px;
-	margin-bottom: 100px;
+	clear: both;
+	margin-bottom: 50px;
 	}
 
 .error + .error {

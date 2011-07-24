@@ -13,6 +13,21 @@ class Welcome extends CI_Controller {
 		$data['error'] = 'nothing';
 		$this -> load -> view('coming_soon', $data);
 	}
+	
+	public function badEmail() {
+		$data['error'] = 'email';
+		$this -> load -> view('coming_soon', $data);
+	} 
+	
+	public function badName() {
+		$data['error'] = 'name';
+		$this -> load -> view('coming_soon', $data);	
+	}
+	
+	public function noAjaxComplete() {
+		$data['error'] = 'noAjaxComplete';
+		$this-> load -> view('coming_soon', $data);
+	}
 
 	public function subscribeAction() {
 		$email = htmlentities($this -> input -> post('email'));
@@ -28,7 +43,9 @@ class Welcome extends CI_Controller {
 			if(mysql_affected_rows() == 1) {
 				include ("../private_application/views/includes/subscribe_email.php");
 				if ($is_ajax) {
-					echo "<p id='load'>Thankyou for subscribing with Ideal Deals! You will receive an email shortly.</p>";
+					echo $this -> load -> view('includes/subscribe_complete');
+				} else {
+					$this -> noAjaxComplete();
 				}
 			}
 		}
@@ -41,7 +58,7 @@ class Welcome extends CI_Controller {
 					<!--end .fieldHolder-->
 				</div>
 				<div class="fieldHolder">
-					<p id ="bad_name">Sorry your email is not valid</p>
+					<p id ="bad_name">Sorry your email ws not valid</p>
 					<label>email:</label> <input type="text" name="email" class="textInput" id="email" />
 					<!--end .fieldHolder-->
 				</div>
@@ -54,7 +71,7 @@ class Welcome extends CI_Controller {
 			if(!preg_match('/^[ a-zA-Z.\-\']{2,40}$/', $name)) {
 				echo '<form action="http://localhost/IdealDeals/public/index.php/welcome/subscribeAction" method="post" accept-charset="utf-8" name="ideal_form" id="subscription_form">				
 				<div class="fieldHolder">
-					<p id ="bad_name">Sorry your name is not valid.</p>
+					<p id ="bad_name">Sorry your name was not valid.</p>
 					<label>name:</label> <input type="text" name="name" class="textInput" id="name" />
 					<!--end .fieldHolder-->
 				</div>
@@ -69,26 +86,17 @@ class Welcome extends CI_Controller {
 				</form>';
 			}
 		} else {
+				
 			if(!valid_email($email)) {
-				badEmail();
+				$this -> badEmail();
 			}
-			if(!preg_match('/^[ a-zA-Z.\-\']{2,40}$/', $name)) {
-				badName();
+			elseif(!preg_match('/^[ a-zA-Z.\-\']{2,40}$/', $name)) {
+				$this -> badName();
 			}
 		}
-	}
-
-	public function badEmail() {
-		$data['error'] = 'email';
-		$this -> load -> view('coming_soon', $data);
-	} 
-	
-	public function badName() {
-		$data['error'] = 'name';
-		$this -> load -> view('coming_soon', $data);	
 	}
 
 }
 
 /* End of file welcome.php */
-/* Location: ./application/controllers/welcome.php */
+/* Location: ./private_application/controllers/welcome.php */
