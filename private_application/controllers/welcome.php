@@ -29,19 +29,16 @@ class Welcome extends CI_Controller {
 
 			if (mysql_affected_rows() == 1) {
 				include("../private_application/views/includes/subscribe_email.php");
-				echo $this->load->view('subscription_success');
+				echo "<p id='load'>Thankyou for subscribing with Ideal Deals! You will receive an email shortly.</p>";
 			}
 		} 
 
 		if (!valid_email($email)) {
 			echo 'not valid email';
-			$email_error = 'Your email is not valid.';
-				
+			echo 'Your email is not valid.';
 		}
 		if (!preg_match('/^[ a-zA-Z.\-\']{2,40}$/', $name)) 		{
-			echo $name;
-			echo 'not valid name';
-			$name_error = 'Your name is not valid.';
+			echo "Sorry your name is not valid";
 		} 
 
 	}
