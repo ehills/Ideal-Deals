@@ -1,5 +1,11 @@
 $(document).ready(function() {
-
+	
+	function displayResponse(msg) {
+		$('#subscription_form').hide();
+		$('#subscribeForm').append(msg); 
+		$('#load').fadeIn(2000); 	
+	};
+	
 	submitHandler: function formSubmit(form) {
 		
 		var form_data = {
@@ -13,9 +19,7 @@ $(document).ready(function() {
 			type: 'POST',
 			data: form_data,
 			success: function(msg) {
-				$('#subscription_form').hide();
-				$('#subscribeForm').append(msg); 
-				$('#load').fadeIn(2000);  
+				displayResponse(msg);
 			}
 		});
 		

@@ -23,25 +23,9 @@
 				<!--end .logoImgHolder-->
 			</div>
 			<div id="subscribeForm">
-			<?php $attributes = array('name' => 'ideal_form', 'id' => 'subscription_form');
-			echo form_open('welcome/subscribeAction', $attributes);?>
-				<div class="fieldHolder">
-					<label>name:</label> <input type="text" name="name"
-						class="textInput" id="name" title=""/>
-					<!--end .fieldHolder-->
-				</div>
-				<div class="fieldHolder">
-					<label>email:</label> <input type="text" name="email"
-						class="textInput" id="email" title=""/>
-					<!--end .fieldHolder-->
-				</div>
-				<div id="submitSubscription">
-					<input id="submitButton" name="submitButton"  type="image"
-						value="Subscribe" alt="subscribe button"
-						src="images/subscribe-button.png" />
-					<!-- end .submit-->
-				</div>
-				</form>
+			<?php 
+				include("../private_application/views/includes/subscribe_form.php");
+			?>
 				<div class="followBtnHolder">
 					<a href="http://www.twitter.com"> <img
 						src="images/twitter-icon.png" alt="Follow on Twitter" width="40"
