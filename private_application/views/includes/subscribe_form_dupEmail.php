@@ -6,7 +6,7 @@
 </div>
 <div class="fieldHolder">
 	<label>email:</label>
-	<p id ="bad_email">Sorry your email is not valid.</p>
+	<p id ="bad_email">Sorry this email is already taken.</p>
 	<input type="text" name="email" class="textInput" id="email" />
 	<!--end .fieldHolder-->
 </div>

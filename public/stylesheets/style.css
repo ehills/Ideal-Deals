@@ -49,8 +49,8 @@ a:hover, a:active, a:focus {
     background-image:url("http://localhost/IdealDeals/public//images/grey-background-texture.png");
 	background-repeat: repeat;
 	position:absolute;
-	width:100%;
-	top:130px;
+	width: 100%;
+	top:140px;
 	height:366px;
 	-moz-box-shadow: 3px 3px 3px #888;
 	-webkit-box-shadow: 3px 3px 3px #888;
@@ -86,7 +86,7 @@ a:hover, a:active, a:focus {
 #subscription_form {
 	font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
 	font-size:18px;
-	margin-left:5px;
+	
 }
 
 #subscription_form label {
@@ -117,7 +117,20 @@ a:hover, a:active, a:focus {
 	position: absolute;
 	width: 200px;
 	left: 280px;
-	top: 8px;
+	top: -15px;
+	font-size: 12pt;
+	color:#d3e8b1;
+	text-shadow: #fff 0px -1px 0px;
+	font-weight:bold;
+	font-weight:800; /*ie style*/
+	margin: 0;
+}
+
+#bad_email { 
+	position: absolute;
+	width: 200px;
+	left: 280px;
+	top: 25px; */
 	font-size: 12pt;
 	color:#d3e8b1;
 	text-shadow: #fff 0px -1px 0px;
@@ -153,8 +166,6 @@ input + .error {
 	position: absolute;
 	left: 300px;
 	width: 200px;
-	clear: both;
-	margin-bottom: 50px;
 	}
 
 .error + .error {

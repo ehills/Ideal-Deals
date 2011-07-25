@@ -28,6 +28,11 @@ class Welcome extends CI_Controller {
 		$data['error'] = 'noAjaxComplete';
 		$this-> load -> view('coming_soon', $data);
 	}
+	
+	public function duplicateEmail() {
+		$data['error'] = 'duplicateEmail';
+		$this-> load -> view('coming_soon', $data);
+	}
 
 	public function subscribeAction() {
 		$email = htmlentities($this -> input -> post('email'));
@@ -47,51 +52,30 @@ class Welcome extends CI_Controller {
 				} else {
 					$this -> noAjaxComplete();
 				}
-			}
+			} /*else {
+				if($is_ajax) {
+					//echo $this -> load -> view('includes/subscribe_form_dupEmail');
+					$this -> dublicateEmail();
+				} else {
+					$this -> dublicateEmail();
+				}
+			}*/
 		}
 		if($is_ajax) {
-				
-			if(!valid_email($email)) {
-				echo '<form action="http://localhost/IdealDeals/public/index.php/welcome/subscribeAction" method="post" accept-charset="utf-8" name="ideal_form" id="subscription_form">				
-				<div class="fieldHolder">
-					<label>name:</label> <input type="text" name="name" class="textInput" id="name" />
-					<!--end .fieldHolder-->
-				</div>
-				<div class="fieldHolder">
-					<p id ="bad_name">Sorry your email ws not valid</p>
-					<label>email:</label> <input type="text" name="email" class="textInput" id="email" />
-					<!--end .fieldHolder-->
-				</div>
-				<div id="submitSubscription">
-					<input id="submitButton" name="submitButton"  type="image" value="Subscribe" alt="subscribe button" src="images/subscribe-button.png" />
-					<!-- end .submit-->
-				</div>
-				</form>';
+			if(!valid_email($email) && !preg_match('/^[ a-zA-Z.\-\']{2,40}$/', $name)) {
+				echo $this -> load -> view('includes/subscribe_form_botherr');
+			}	
+			elseif(!preg_match('/^[ a-zA-Z.\-\']{2,40}$/', $name)) {
+				echo $this -> load -> view('includes/subscribe_form_nameerr');
 			}
-			if(!preg_match('/^[ a-zA-Z.\-\']{2,40}$/', $name)) {
-				echo '<form action="http://localhost/IdealDeals/public/index.php/welcome/subscribeAction" method="post" accept-charset="utf-8" name="ideal_form" id="subscription_form">				
-				<div class="fieldHolder">
-					<p id ="bad_name">Sorry your name was not valid.</p>
-					<label>name:</label> <input type="text" name="name" class="textInput" id="name" />
-					<!--end .fieldHolder-->
-				</div>
-				<div class="fieldHolder">
-					<label>email:</label> <input type="text" name="email" class="textInput" id="email" />
-					<!--end .fieldHolder-->
-				</div>
-				<div id="submitSubscription">
-					<input id="submitButton" name="submitButton"  type="image" value="Subscribe" alt="subscribe button" src="images/subscribe-button.png" />
-					<!-- end .submit-->
-				</div>
-				</form>';
+			elseif(!valid_email($email)) {
+				echo $this -> load -> view('includes/subscribe_form_emailerr');
 			}
 		} else {
-				
-			if(!valid_email($email)) {
-				$this -> badEmail();
-			}
-			elseif(!preg_match('/^[ a-zA-Z.\-\']{2,40}$/', $name)) {
+			if(!preg_match('/^[ a-zA-Z.\-\']{2,40}$/', $name)) {
 				$this -> badName();
+			} elseif(!valid_email($email)) {
+				$this -> badEmail();
 			}
 		}
 	}
