@@ -40,12 +40,12 @@ $(document).ready(function() {
 		},
 		messages: {
 			name: {
-				required: "Please enter your first and last name",
+				required: "Please enter your first and last name.",
 				minlength: "Your name is too short."
 			},
 			email: { 
-				email: "Please enter a valid email address",
-				required: "Please enter an email address"
+				email: "Please enter a valid email address.",
+				required: "Please enter an email address."
 			}
 		},
 		errorLabelContainer: "#messageBox",

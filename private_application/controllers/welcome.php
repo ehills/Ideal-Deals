@@ -24,6 +24,11 @@ class Welcome extends CI_Controller {
 		$this -> load -> view('coming_soon', $data);	
 	}
 	
+	public function badBoth() {
+		$data['error'] = 'both';
+		$this -> load -> view('coming_soon', $data);	
+	}
+	
 	public function noAjaxComplete() {
 		$data['error'] = 'noAjaxComplete';
 		$this-> load -> view('coming_soon', $data);
@@ -72,7 +77,9 @@ class Welcome extends CI_Controller {
 				echo $this -> load -> view('includes/subscribe_form_emailerr');
 			}
 		} else {
-			if(!preg_match('/^[ a-zA-Z.\-\']{2,40}$/', $name)) {
+			if (!valid_email($email) && !preg_match('/^[ a-zA-Z.\-\']{2,40}$/', $name)) {
+				$this -> badBoth();
+			} elseif(!preg_match('/^[ a-zA-Z.\-\']{2,40}$/', $name)) {
 				$this -> badName();
 			} elseif(!valid_email($email)) {
 				$this -> badEmail();
