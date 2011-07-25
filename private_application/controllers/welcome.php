@@ -13,7 +13,7 @@ class Welcome extends CI_Controller {
 		$data['error'] = 'nothing';
 		$this -> load -> view('coming_soon', $data);
 	}
-	
+
 	public function badEmail() {
 		$data['error'] = 'email';
 		$this -> load -> view('coming_soon', $data);
@@ -43,26 +43,33 @@ class Welcome extends CI_Controller {
 		$email = htmlentities($this -> input -> post('email'));
 		$name = htmlentities($this -> input -> post('name'));
 		$is_ajax = $this -> input -> post('ajax');
-
+		
 		if(valid_email($email) && preg_match('/^[ a-zA-Z.\-\']{2,40}$/', $name)) {
-			$sql = "INSERT INTO subscribed_users(name, email)
+			$sql = "SELECT email FROM subscribed_users
+					WHERE email = ?";
+
+			$this -> db -> query($sql, array($email));
+			
+			if(mysql_affected_rows() == 1) {
+				if ($is_ajax) {
+					echo $this -> load -> view('includes/subscribe_form_dupEmail');
+				} else {
+					$this -> duplicateEmail();
+				}
+				
+			} else {
+				$sql = "INSERT INTO subscribed_users(name, email)
 					VALUES(?, ?)";
 
-			$this -> db -> query($sql, array($name, $email));
-
-			if(mysql_affected_rows() == 1) {
-				include ("../private_application/views/includes/subscribe_email.php");
-				if ($is_ajax) {
-					echo $this -> load -> view('includes/subscribe_complete');
-				} else {
-					$this -> noAjaxComplete();
-				}
-			} else {
-				if($is_ajax) {
-					echo $this -> load -> view('includes/subscribe_form_dupEmail');
-					
-				} else {
-					$this -> dublicateEmail();
+				$this -> db -> query($sql, array($name, $email));
+				
+				if(mysql_affected_rows() == 1) {
+					include ("../private_application/views/includes/subscribe_email.php");
+					if ($is_ajax) {
+						echo $this -> load -> view('includes/subscribe_complete');
+					} else {
+						$this -> noAjaxComplete();
+					}
 				}
 			}
 		}
@@ -85,9 +92,9 @@ class Welcome extends CI_Controller {
 				$this -> badEmail();
 			}
 		}
-	}
-
+	
+	
 }
-
+}
 /* End of file welcome.php */
 /* Location: ./private_application/controllers/welcome.php */
