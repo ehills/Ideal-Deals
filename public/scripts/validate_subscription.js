@@ -1,5 +1,11 @@
 $(document).ready(function() {
-
+	
+	function displayResponse(msg) {
+		$('#subscription_form').hide();
+		$('#subscribeForm').append(msg); 
+		$('#load').fadeIn(2000); 	
+	};
+	
 	submitHandler: function formSubmit(form) {
 		
 		var form_data = {
@@ -13,15 +19,12 @@ $(document).ready(function() {
 			type: 'POST',
 			data: form_data,
 			success: function(msg) {
-				$('#subscription_form').hide();
-				$('#subscribeForm').append(msg); 
-				$('#load').fadeIn(1000);  
+				displayResponse(msg);
 			}
 		});
 		
 		return false;
 	}
-
 
 	//validate register form on ready and submit
 	$("#subscription_form").validate({
@@ -46,10 +49,5 @@ $(document).ready(function() {
 			}
 		},
 		submitHandler: formSubmit
-	
-	
 	});
-
-
 });
-

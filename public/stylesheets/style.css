@@ -46,11 +46,11 @@ a:hover, a:active, a:focus {
 
 .greyFiller {
 	margin: 0 auto;
-    background-image:url(../images/grey-background-texture.png);
+    background-image:url("http://localhost/IdealDeals/public//images/grey-background-texture.png");
 	background-repeat: repeat;
 	position:absolute;
-	width:100%;
-	top:130px;
+	width: 100%;
+	top:140px;
 	height:366px;
 	-moz-box-shadow: 3px 3px 3px #888;
 	-webkit-box-shadow: 3px 3px 3px #888;
@@ -58,7 +58,7 @@ a:hover, a:active, a:focus {
 	/* For IE 8 */
 	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#888888')";
 	/* For IE 5.5 - 7 */
-	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#888888');
+	filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#888888')";
 	z-index:5;
 }
 
@@ -86,7 +86,7 @@ a:hover, a:active, a:focus {
 #subscription_form {
 	font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
 	font-size:18px;
-	margin-left:5px;
+	
 }
 
 #subscription_form label {
@@ -97,12 +97,46 @@ a:hover, a:active, a:focus {
 }
 
 #load { 
-	display: none; 
+	display: none;
 	font-size: 18pt;
 	color:#d3e8b1;
 	text-shadow: #fff 0px -1px 0px;
 	font-weight:bold;
-	font-weight:800;/*ie style*/
+	font-weight:800; /*ie style*/
+}
+
+#noAjax { 
+	font-size: 18pt;
+	color:#d3e8b1;
+	text-shadow: #fff 0px -1px 0px;
+	font-weight:bold;
+	font-weight:800; /*ie style*/
+}
+
+#bad_name { 
+	position: absolute;
+	width: 200px;
+	left: 280px;
+	top: -15px;
+	font-size: 12pt;
+	color:#d3e8b1;
+	text-shadow: #fff 0px -1px 0px;
+	font-weight:bold;
+	font-weight:800; /*ie style*/
+	margin: 0;
+}
+
+#bad_email { 
+	position: absolute;
+	width: 200px;
+	left: 280px;
+	top: 25px; */
+	font-size: 12pt;
+	color:#d3e8b1;
+	text-shadow: #fff 0px -1px 0px;
+	font-weight:bold;
+	font-weight:800; /*ie style*/
+	margin: 0;
 }
  
 /* field imput */
@@ -128,19 +162,10 @@ a:hover, a:active, a:focus {
 
 /* Javascript errors */
 
-	/*.error {
-	position: absolute;
-	top: -10px;
-	margin-left: 10px;
-    font-size: 12pt;
-    width: 200px;
-}
-*/
 input + .error {
 	position: absolute;
-	margin-left: 10px;
+	left: 300px;
 	width: 200px;
-	margin-bottom: 100px;
 	}
 
 .error + .error {
