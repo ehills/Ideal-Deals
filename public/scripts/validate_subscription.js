@@ -15,7 +15,7 @@ $(document).ready(function() {
 		};
 
 		$.ajax({
-			url: "http://localhost/IdealDeals/public/index.php/welcome/subscribeAction",
+			url: "http://localhost/IdealDeals/public/index.php/welcome/subscribe",
 			type: 'POST',
 			data: form_data,
 			success: function(msg) {

@@ -1,5 +1,5 @@
 <?php $attributes = array('name' => 'ideal_form', 'id' => 'subscription_form');
-			echo form_open('welcome/subscribeAction', $attributes); ?>
+			echo form_open('welcome/subscribe', $attributes); ?>
 				<div class="fieldHolder">
 					<label>name:</label> <input type="text" name="name" class="textInput" id="name" />
 					<!--end .fieldHolder-->

@@ -39,7 +39,7 @@ class Welcome extends CI_Controller {
 		$this-> load -> view('coming_soon', $data);
 	}
 
-	public function subscribeAction() {
+	public function subscribe() {
 		$email = htmlentities($this -> input -> post('email'));
 		$name = htmlentities($this -> input -> post('name'));
 		$is_ajax = $this -> input -> post('ajax');
@@ -57,14 +57,14 @@ class Welcome extends CI_Controller {
 				} else {
 					$this -> noAjaxComplete();
 				}
-			} /*else {
+			} else {
 				if($is_ajax) {
-					//echo $this -> load -> view('includes/subscribe_form_dupEmail');
-					$this -> dublicateEmail();
+					echo $this -> load -> view('includes/subscribe_form_dupEmail');
+					
 				} else {
 					$this -> dublicateEmail();
 				}
-			}*/
+			}
 		}
 		if($is_ajax) {
 			if(!valid_email($email) && !preg_match('/^[ a-zA-Z.\-\']{2,40}$/', $name)) {

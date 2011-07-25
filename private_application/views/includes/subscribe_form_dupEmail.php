@@ -1,4 +1,4 @@
-<form action="http://localhost/IdealDeals/public/index.php/welcome/subscribeAction" method="post" accept-charset="utf-8" name="ideal_form" id="subscription_form">	
+<form action="http://localhost/IdealDeals/public/index.php/welcome/subscribe" method="post" accept-charset="utf-8" name="ideal_form" id="subscription_form">	
 <div class="fieldHolder">
 	<label>name:</label>
 	<input type="text" name="name" class="textInput" id="name" />
