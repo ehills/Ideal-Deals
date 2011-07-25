@@ -23,11 +23,14 @@
 				<!--end .logoImgHolder-->
 			</div>
 			<div id="subscribeForm">
+				<ul id="messageBox"></ul>
 			<?php 
 				if ($error == 'email') {
 					include("../private_application/views/includes/subscribe_form_emailerr.php");
 				} elseif($error == 'name') {
 					include("../private_application/views/includes/subscribe_form_nameerr.php");
+				} elseif($error == 'both') {
+					include("../private_application/views/includes/subscribe_form_botherr.php");
 				} elseif($error == 'duplicateEmail') {
 					include("../private_application/views/includes/subscribe_form_dupEmail.php");
 				} elseif($error == 'noAjaxComplete') {

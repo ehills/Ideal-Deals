@@ -1,7 +1,7 @@
 <form action="http://localhost/IdealDeals/public/index.php/welcome/subscribeAction" method="post" accept-charset="utf-8" name="ideal_form" id="subscription_form">	
 <div class="fieldHolder">
 	<label>name:</label>
-	<p id ="bad_name">Sorry your name is not valid.</p>
+	<p id ="bad_name">Please enter your first and last name.</p>
 	<input type="text" name="name" class="textInput" id="name" />
 	<!--end .fieldHolder-->
 </div>

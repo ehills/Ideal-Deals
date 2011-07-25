@@ -36,6 +36,10 @@ a:hover, a:active, a:focus {
 	text-decoration: none;
 }
 
+li {
+	list-style-type: none;
+}
+
 /* Container */
 #container {
 	padding-top:17px;
@@ -47,7 +51,7 @@ a:hover, a:active, a:focus {
 .greyFiller {
 	margin: 0 auto;
     background-image:url("http://localhost/IdealDeals/public//images/grey-background-texture.png");
-	background-repeat: repeat;
+	background-repeat: repeat-x;
 	position:absolute;
 	width: 100%;
 	top:140px;
@@ -161,16 +165,23 @@ a:hover, a:active, a:focus {
 }
 
 /* Javascript errors */
-
-input + .error {
-	position: absolute;
-	left: 300px;
-	width: 200px;
-	}
-
-.error + .error {
-	top: -15px;
+label.error {
+	font-size: 13pt;
+	color:#d3e8b1;
+	text-shadow: #fff 0px -1px 0px;
+	font-weight:bold;
+	font-weight:800; /*ie style*/
 }
+
+#messageBox {
+	display: none;
+	width:200px;
+	position: absolute;
+	left: 255px;
+	height: 100px;
+	top: -5px;
+}
+
 /* end of errors */
 
 input:focus,textarea:focus,select:focus{

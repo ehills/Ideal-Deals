@@ -48,6 +48,8 @@ $(document).ready(function() {
 				required: "Please enter an email address"
 			}
 		},
+		errorLabelContainer: "#messageBox",
+   		wrapper: "li",
 		submitHandler: formSubmit
 	});
 });
