@@ -107,6 +107,8 @@ li {
 	text-shadow: #fff 0px -1px 0px;
 	font-weight:bold;
 	font-weight:800; /*ie style*/
+	padding-left: 6px;
+	width: 300px;
 }
 
 #noAjax { 
