@@ -64,7 +64,7 @@ class Welcome extends CI_Controller {
 				$this -> db -> query($sql, array($name, $email));
 				
 				if(mysql_affected_rows() == 1) {
-					include ("../private_application/views/includes/subscribe_email.php");
+					include ("private_application/views/includes/subscribe_email.php");
 					if ($is_ajax) {
 						echo $this -> load -> view('includes/subscribe_complete');
 					} else {

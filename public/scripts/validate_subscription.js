@@ -15,7 +15,7 @@ $(document).ready(function() {
 		};
 
 		$.ajax({
-			url: "http://www.localhost.co.nz/index.php/welcome/subscribe",
+			url: "http://www.idealdeals.co.nz/index.php/welcome/subscribe",
 			type: 'POST',
 			data: form_data,
 			success: function(msg) {

@@ -11,7 +11,7 @@
 	</div>
 	<div id="submitSubscription">
 		<input id="submitButton" name="submitButton"  type="image" value="Subscribe" alt="subscribe button"
-		src="http://localhost/IdealDeals/public/images/subscribe-button.png" />
+		src="images/subscribe-button.png" />
 		<!-- end .submit-->
 	</div>
 </form>

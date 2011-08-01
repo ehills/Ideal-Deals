@@ -41,9 +41,9 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'root';
-$db['default']['password'] = '';
+$db['default']['hostname'] = 'idealdeals.db.8150234.hostedresource.com';
+$db['default']['username'] = 'idealdeals';
+$db['default']['password'] = 'Satain666';
 $db['default']['database'] = 'idealdeals';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
@@ -59,4 +59,4 @@ $db['default']['stricton'] = FALSE;
 
 
 /* End of file database.php */
-/* Location: ./application/config/database.php */
+/* Location: ./private_application/config/database.php */

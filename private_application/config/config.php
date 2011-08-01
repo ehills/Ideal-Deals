@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= ''; // NEEDS TO BE FIXED
+$config['base_url']	= 'http://idealdeals.co.nz';
 
 /*
 |--------------------------------------------------------------------------
