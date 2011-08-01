@@ -1,4 +1,4 @@
-<form action="http://localhost/IdealDeals/public/index.php/welcome/subscribe" method="post" accept-charset="utf-8" name="ideal_form" id="subscription_form">	
+<form action="http://www.idealdeals.co.nz/index.php/welcome/subscribe" method="post" accept-charset="utf-8" name="ideal_form" id="subscription_form">	
 <div class="fieldHolder">
 	<label>name:</label>
 	<input type="text" name="name" class="textInput" id="name" />
@@ -12,7 +12,7 @@
 </div>
 <div id="submitSubscription">
 	<input id="submitButton" name="submitButton"  type="image" value="Subscribe" alt="subscribe button"
-	src= "http://localhost/IdealDeals/public/images/subscribe-button.png" />
+	src= "http://www.idealdeals.co.nz/images/subscribe-button.png" />
 	<!-- end .submit-->
 </div>
 </form>
