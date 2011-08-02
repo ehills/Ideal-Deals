@@ -41,9 +41,9 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'idealdeals.db.8150234.hostedresource.com';
-$db['default']['username'] = 'idealdeals';
-$db['default']['password'] = 'Satain666';
+$db['default']['hostname'] = 'localhost'; // live 'idealdeals.db.8150234.hostedresource.com';
+$db['default']['username'] = 'root'; // live 'idealdeals';
+$db['default']['password'] = '';// live 'Satain666';
 $db['default']['database'] = 'idealdeals';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';

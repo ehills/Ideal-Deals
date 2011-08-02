@@ -15,7 +15,7 @@ $(document).ready(function() {
 		};
 
 		$.ajax({
-			url: "/index.php?/welcome/subscribe",
+			url: "index.php?/welcome/subscribe", // live "/index.php?/welcome/subscribe",
 			type: 'POST',
 			data: form_data,
 			success: function(msg) {
