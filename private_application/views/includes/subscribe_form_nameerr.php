@@ -1,4 +1,4 @@
-<form action="http://www.idealdeals.co.nz/index.php/welcome/subscribe" method="post" accept-charset="utf-8" name="ideal_form" id="subscription_form">	
+<form action="http://www.idealdeals.co.nz/index.php?/welcome/subscribe" method="post" accept-charset="utf-8" name="ideal_form" id="subscription_form">	
 <div class="fieldHolder">
 	<label>name:</label>
 	<p id ="bad_name">Please enter your first and last name.</p>

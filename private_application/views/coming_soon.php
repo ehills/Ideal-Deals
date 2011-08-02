@@ -3,9 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>Ideal deals for you!</title>
+                <meta name="description=" content="Ideal Deals offers you the best deals in New Zealand. 50-90% off Guaranteed. Deals straight from the supplier to you. Still under construction however but sign up now and we'll let you know when we're up and running." />
+                     
+		<title>Ideal Deals - Ideal deals coming soon! Subscribe now!</title>
 		<link href="stylesheets/style.css" rel="stylesheet" type="text/css" />
-		<!-- include jQuery library -->
 		<script type="text/javascript" src="scripts/jquery-1.6.2.min.js"></script>
 		<script type="text/javascript" src="scripts/jquery.validate.js"></script>
 		<script type="text/javascript" src="scripts/validate_subscription.js"></script>
@@ -17,7 +18,7 @@
 		<div id="container">
 			<div id="content">
 				<div id="logoImgHolder">
-					<img src="images/ideal-logo.png" alt="ideal deals" width="512" height="615" />
+					<img src="images/ideal-logo.png" alt="Ideal Deals. Deals you don't want to miss out on." width="512" height="615" />
 					<!--end .logoImgHolder-->
 				</div>
 				<div id="subscribeForm">
@@ -38,9 +39,9 @@ if($error == 'email') {
 }?>
 					<div class="followBtnHolder">
 						<a href="http://www.twitter.com"> <img
-						src="images/twitter-icon.png" alt="Follow on Twitter" width="40"
+						src="images/twitter-icon.png" alt="Follow us on Twitter" width="40"
 						height="40" /> </a><a href="http://www.facebook.com"> <img
-						src="images/facebook-icon.png" alt="Follow on Facebook" width="40"
+						src="images/facebook-icon.png" alt="Follow us on Facebook" width="40"
 						height="40" /> </a>
 					</div>
 				</div>

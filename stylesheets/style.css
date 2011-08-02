@@ -1,0 +1,244 @@
+@charset "UTF-8";
+
+/* CSS Reset */
+html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}
+
+/* My Css Coming Soon Page*/
+
+/* Universal declarations */
+body {
+	border:8px solid #fff;
+	border-left:hidden;
+	border-right:hidden;
+	border-bottom:hidden;
+	margin: 0;
+	padding: 0;
+	background-color:#fafafa;
+}
+
+ul, ol, dl { 
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	
+	padding-right: 15px;
+	padding-left: 15px; 
+}
+a img { 
+	border: none;
+}
+
+a:link {
+	color:#414958;
+	text-decoration: none;
+}
+a:visited {
+	color: #4E5869;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { 
+	text-decoration: none;
+}
+
+li {
+	list-style-type: none;
+}
+
+/* Container */
+#container {
+	padding-top:17px;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.greyFiller {
+	margin: 0 auto;
+    background-image:url("http://www.idealdeals.co.nz/images/grey-background-texture.png");
+	background-repeat: repeat-x;
+	position:absolute;
+	width: 100%;
+	top:140px;
+	height:366px;
+	-moz-box-shadow: 3px 3px 3px #888;
+	-webkit-box-shadow: 3px 3px 3px #888;
+	box-shadow: 3px 3px 3px #888;
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#888888')";
+	/* For IE 5.5 - 7 */
+	filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#888888')";
+	z-index:5;
+}
+
+/* logo */
+#logoImgHolder {
+	position:relative;
+	margin-left:auto;
+	margin-right:auto;
+	width:380px;
+	height:500px;
+	z-index:10;
+}
+
+/* Form */
+#subscribeForm {
+	margin-left:auto;
+	margin-right:auto;
+	position:relative;
+	left:20px;
+	bottom:100px;
+    width:320px;
+	z-index:56;
+}
+
+#subscription_form {
+	font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+	font-size:18px;
+	
+}
+
+#subscription_form label {
+	color:#d3e8b1;
+	text-shadow: #fff 0px -1px 0px;
+	font-weight:bold;
+	font-weight:800;/*ie style*/
+}
+
+#load { 
+	display: none;
+	font-size: 18px;
+	color:#d3e8b1;
+	text-shadow: #fff 0px -1px 0px;
+	font-weight:bold;
+	font-weight:800; /*ie style*/
+	padding-left: 6px;
+	width: 300px;
+}
+
+#noAjax { 
+	font-size: 18pt;
+	color:#d3e8b1;
+	text-shadow: #fff 0px -1px 0px;
+	font-weight:bold;
+	font-weight:800; /*ie style*/
+}
+
+#bad_name { 
+	position: absolute;
+	width: 200px;
+	left: 280px;
+	top: -8px;
+	font-size: 12pt;
+	color:#d3e8b1;
+	text-shadow: #fff 0px -1px 0px;
+	font-weight:bold;
+	font-weight:800; /*ie style*/
+	margin: 0;
+}
+
+#bad_email { 
+	position: absolute;
+	width: 200px;
+	left: 280px;
+	top: 32px;
+	font-size: 12pt;
+	color:#d3e8b1;
+	text-shadow: #fff 0px -1px 0px;
+	font-weight:bold;
+	font-weight:800; /*ie style*/
+	margin: 0;
+}
+ 
+/* field imput */
+.fieldHolder #email{
+	position:relative;
+	margin-top:10px;
+	width:200px;
+}
+
+.fieldHolder input{
+	-webkit-box-shadow: 0 -1px 0 rgba(0,0,0,.3),inset 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 -1px 0 rgba(0,0,0,.3),inset 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 -1px 0 rgba(0,0,0,.3),inset 0 1px 2px rgba(0,0,0,.2);
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	background-color:#500202;
+	border: none!important;
+	outline:none;	
+	color:white;
+	font-size:18px;
+}
+
+/* Javascript errors */
+label.error {
+	font-size: 13pt;
+	color:#d3e8b1;
+	text-shadow: #fff 0px -1px 0px;
+	font-weight:bold;
+	font-weight:800; /*ie style*/
+}
+
+#messageBox {
+	display: none;
+	width:200px;
+	position: absolute;
+	left: 255px;
+	height: 100px;
+	top: -5px;
+}
+
+/* end of errors */
+
+input:focus,textarea:focus,select:focus{
+ -webkit-box-shadow:0 8px rgba(255,255,255,.5);
+ -moz-box-shadow:0 0 8px rgba(255,255,255,.5);
+ box-shadow:0 0 8px rgba(255,255,255,.5);
+}
+
+input.textInput {
+	width:200px;
+}
+
+#submitSubscription {
+	position:relative;
+	padding-top:20px;
+	margin-left:150px;
+}
+
+.ie div#submitSubscription {
+	position:relative;
+	padding-top:29px;
+	margin-left:150px;
+}
+	
+.followBtnHolder {
+	padding-bottom:50px;
+	position:absolute;
+	top:90px;
+	right:210px;
+}
+
+.followBtnHolder img {
+	margin-left: 10px;
+}
+
+#content ul, #content ol { 
+	padding: 0 15px 15px 40px; 
+}
+
+.fltrt {  
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { 
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { 
+clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
