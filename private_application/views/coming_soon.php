@@ -18,16 +18,12 @@
 		<div id="container">
 					<?php
 if($error == 'email') {
-	//echo '"';
 	include ("private_application/views/includes/subscribe_form_emailerr.php");
 } elseif($error == 'name') {
-	//echo '<ul id="messageBox" style="display:block;"';
 	include ("private_application/views/includes/subscribe_form_nameerr.php");
 } elseif($error == 'both') {
-	//echo '<ul id="messageBox" style="display:block;"';
 	include ("private_application/views/includes/subscribe_form_botherr.php");
 } elseif($error == 'duplicateEmail') {
-	//echo '<ul id="messageBox" style="display:block;"';
 	include ("private_application/views/includes/subscribe_form_dupEmail.php");
 } elseif($error == 'noAjaxComplete') {
 	include ("private_application/views/includes/subscribe_form_noAjax.php");
