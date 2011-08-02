@@ -16,13 +16,7 @@
 	<![endif]-->
 	<body>
 		<div id="container">
-			<div id="content">
-				<div id="logoImgHolder">
-					<img src="images/ideal-logo.png" alt="Ideal Deals. Deals you don't want to miss out on." width="512" height="615" />
-					<!--end .logoImgHolder-->
-				</div>
-				<div id="subscribeForm">
-					<ul id="messageBox"></ul>
+			<ul id="messageBox"></ul>
 					<?php
 if($error == 'email') {
 	include ("private_application/views/includes/subscribe_form_emailerr.php");
@@ -37,20 +31,10 @@ if($error == 'email') {
 } else {
 	include ("private_application/views/includes/subscribe_form.php");
 }?>
-					<div class="followBtnHolder">
-						<a href="http://www.twitter.com"> <img
-						src="images/twitter-icon.png" alt="Follow us on Twitter" width="40"
-						height="40" /> </a><a href="http://www.facebook.com"> <img
-						src="images/facebook-icon.png" alt="Follow us on Facebook" width="40"
-						height="40" /> </a>
-					</div>
-				</div>
-				<div class="greyFiller">
-					<!--end .greyFiller-->
-				</div>
-				<!-- end .content -->
-			</div>
-			<!-- end .container -->
-		</div>
+					<ul class="social-media-icons">
+			<li><a href="#"><img src="images/facebook-icon.png" alt="Like Us On Facebook" /></a></li>
+			<li><a href="#"><img src="images/twitter-icon.png" alt="Follow Us On Twitter" /></a></li>
+		</ul>
+	</div>
 	</body>
 </html>

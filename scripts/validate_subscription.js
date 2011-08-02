@@ -2,7 +2,7 @@ $(document).ready(function() {
 	
 	function displayResponse(msg) {
 		$('#subscription_form').hide();
-		$('#subscribeForm').append(msg); 
+		$('#container').append(msg); 
 		$('#load').fadeIn(2000); 	
 	};
 	
