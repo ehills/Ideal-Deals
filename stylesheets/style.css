@@ -79,7 +79,6 @@ input[type=submit] {
 	display: block;
 	width:142px;
 	height: 45px;
-	color: transparent;
 	border: none;
 	background: transparent url('../images/subscribe-button.png') no-repeat bottom right;
 	cursor: pointer;
